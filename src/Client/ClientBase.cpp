@@ -1381,7 +1381,7 @@ bool ClientBase::receiveEndOfQuery()
 
             case Protocol::Server::Progress:
                 onProgress(packet.progress);
-                break;
+                return true;
 
             case Protocol::Server::ProfileEvents:
                 onProfileEvents(packet.block);
